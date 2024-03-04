@@ -31,7 +31,7 @@ std::string deco;
 std::string value;
 
 
-std::set<std::string> keywords = { "int","char","if","else","while","for","out","in","switch","case","return" };
+std::set<std::string> keywords = { "kwint","char","kwif","kwelse","kwwhile","for","kwout","kwin","switch","case","kwreturn" };
 
 pair<int, Lexem> tick(int state, istream& stream, char& cache) {
     switch (state) {
@@ -235,7 +235,7 @@ pair<int, Lexem> tick(int state, istream& stream, char& cache) {
     case 16:
         if (cache == 39) {
             read(cache, stream);
-            return { 17, {"char(" + char_rem + ")",""} };
+            return { 17, {"char",char_rem} };
         }
         else {
             return { -1, LEX_ERROR };
@@ -264,7 +264,7 @@ pair<int, Lexem> tick(int state, istream& stream, char& cache) {
 
     case 20:
         read(cache, stream);
-        return { 0, {"str(" + cache_pull + ")",""} };
+        return { 0, {"str",cache_pull} };
 
     case 21:
         while (isalpha(cache) || isdigit(cache)) {
@@ -277,7 +277,7 @@ pair<int, Lexem> tick(int state, istream& stream, char& cache) {
         }
         else {
 
-            return { 0, {"id(" + deco + ")",""} };
+            return { 0, {"id",deco} };
         }
 
     case 22:
@@ -296,7 +296,7 @@ pair<int, Lexem> tick(int state, istream& stream, char& cache) {
             value += cache;
             read(cache, stream);
         }
-        return { 0, {"num(" + value + ")",""} };
+        return { 0, {"num",value} };
 
     default:
         return { -1, LEX_EMPTY };
