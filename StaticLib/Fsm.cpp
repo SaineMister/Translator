@@ -31,7 +31,7 @@ std::string deco;
 std::string value;
 
 
-std::set<std::string> keywords = { "kwint","char","kwif","kwelse","kwwhile","for","kwout","kwin","switch","case","kwreturn" };
+std::set<std::string> keywords = { "int","char","if","else","while","for","out","in","switch","case","return" };
 
 pair<int, Lexem> tick(int state, istream& stream, char& cache) {
     switch (state) {
@@ -273,7 +273,7 @@ pair<int, Lexem> tick(int state, istream& stream, char& cache) {
         }
         if (keywords.find(deco) != keywords.end()) { //типо прошли всю коллекцию, а эл-а нет
 
-            return { 0, {deco, ""} };
+            return { 0, {"kw" + deco, ""}};
         }
         else {
 

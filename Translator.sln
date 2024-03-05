@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StaticLib", "StaticLib\Stat
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shunting-yard-lib", "shunting-yard-lib\shunting-yard-lib.vcxproj", "{976A2926-D35B-47F7-B143-D348901E1106}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortingStation", "SortingStation\SortingStation.vcxproj", "{70FBDF85-A060-4B05-9736-E164CE29A46F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{976A2926-D35B-47F7-B143-D348901E1106}.Release|x64.Build.0 = Release|x64
 		{976A2926-D35B-47F7-B143-D348901E1106}.Release|x86.ActiveCfg = Release|Win32
 		{976A2926-D35B-47F7-B143-D348901E1106}.Release|x86.Build.0 = Release|Win32
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Debug|x64.ActiveCfg = Debug|x64
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Debug|x64.Build.0 = Debug|x64
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Debug|x86.ActiveCfg = Debug|Win32
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Debug|x86.Build.0 = Debug|Win32
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Release|x64.ActiveCfg = Release|x64
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Release|x64.Build.0 = Release|x64
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Release|x86.ActiveCfg = Release|Win32
+		{70FBDF85-A060-4B05-9736-E164CE29A46F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
